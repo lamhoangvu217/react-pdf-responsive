@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import PdfViewerComponent from "./components/PdfViewerComponent";
 import "./App.css";
+import Wrapper from "./components/Wrapper";
 
 function App() {
   const [document, setDocument] = useState("document.pdf");
@@ -10,11 +11,8 @@ function App() {
 
   return (
     <div className="App">
-      <button className="App-button" onClick={handleOpen}>
-        Open another document
-      </button>
       <div className="App-viewer">
-        <PdfViewerComponent document={document} />
+        <Wrapper />
       </div>
     </div>
   );
